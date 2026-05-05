@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Nezuko Kamado",
+    "description": {
+      "nickname": "Nezuko-chan"
+    },
+    "date": "2026-05-01T18:30:00.000Z",
+    "location": {
+      "lastSeen": "Floresta próxima à vila",
+      "city": "Asakusa",
+      "state": "Tokyo",
+      "referencePoint": "Perto de uma trilha de bambu",
+      "coordinates": {
+        "lat": 35.7148,
+        "lng": 139.7967
+      }
+    },
+    "contactInfo": {
+      "phone": "000000000",
+      "name": "Tanjiro Kamado"
+    },
+    "age": 14,
+    "gender": "female",
+    "photoUrl": "/docs/assets/images/nezuko.jpg",
+    "status": "missing",
+    "createdAt": "2026-05-01T19:00:00.000Z",
+    "updatedAt": "2026-05-05T22:58:07.737Z"
+  },
+  {
+    "id": 2,
+    "name": "Naruto Uzumaki",
+    "description": {
+      "nickname": "Naruto",
+      "skinColor": "Clara",
+      "hairColor": "Loiro",
+      "eyeColor": "Azul",
+      "height": 145,
+      "behavior": "Extrovertido, energético, fala alto",
+      "clothes": "Jaqueta laranja com detalhes azuis e calça escura",
+      "accessories": "Bandana com símbolo da Vila da Folha",
+      "physicalDetails": "Três marcas em cada bochecha",
+      "lastSeenCondition": "Animado, saiu correndo sem avisar"
+    },
+    "date": "2026-05-03T14:20:00.000Z",
+    "location": {
+      "lastSeen": "Campo de treinamento",
+      "city": "Konohagakure",
+      "state": "País do Fogo",
+      "referencePoint": "Próximo às árvores grandes",
+      "coordinates": {
+        "lat": 35.6895,
+        "lng": 139.6917
+      }
+    },
+    "contactInfo": {
+      "phone": "000000001",
+      "name": "Iruka Umino"
+    },
+    "age": 12,
+    "gender": "male",
+    "photoUrl": "/docs/assets/images/naruto.jpg",
+    "status": "missing",
+    "createdAt": "2026-05-03T14:30:00.000Z",
+    "updatedAt": "2026-05-03T14:30:00.000Z"
+  }
+]

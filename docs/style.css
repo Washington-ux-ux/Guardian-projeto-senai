@@ -1,0 +1,291 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS geral, para todas as paginas html */
+body {
+    background-color: #0a0a0a;
+    background-image: url('./assets/images/texture.png');
+    background-repeat: repeat;
+}
+.banner {
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo-guardian img,
+.logo-police img {
+    height: 80%;
+    max-width: 400px;
+    object-fit: contain;
+    filter: brightness(0.9) contrast(1.2);
+    mix-blend-mode: screen;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #e4b75c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-top: 2px solid silver;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 40px;
+}
+
+a{
+    font-size: 18px;
+}
+
+a, a:visited, a:hover, a:active {
+    color: #000000; 
+    text-decoration: none;
+}
+
+/* Estilos para o conteúdo principal index.html*/
+.main-content {
+    display: flex;
+    padding: 40px 20px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-section {
+    flex: 1;
+    color: #333;
+}
+
+.text-section h2 {
+    color: #e4b75c;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #f0f0f0;
+    font-weight: 300;
+}
+
+.info-panel {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #2c3e50, #34495e), url('./assets/images/texture.png');
+    background-blend-mode: overlay;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.info-box:last-child {
+    border-bottom: none;
+}
+
+.info-box i {
+    font-size: 24px;
+    color: #e4b75c;
+    width: 40px;
+    text-align: center;
+}
+
+.info-box span {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* CSS para conteudo principal do missing.html */
+
+
+/* CSS para conteudo principal do located.html */
+
+
+/* CSS para conteudo principal do about.html */
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-header h1 {
+    color: #e4b75c;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.divider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #e4b75c, transparent);
+    margin: 0 auto;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.section-card {
+    background: linear-gradient(135deg, #2c3e50, #34495e), url('./assets/images/texture.png');
+    background-blend-mode: overlay;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card i {
+    font-size: 48px;
+    color: #e4b75c;
+    margin-bottom: 20px;
+}
+
+.section-card h2 {
+    color: #e4b75c;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.section-card p {
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.section-card ul {
+    text-align: left;
+    color: #f0f0f0;
+    line-height: 1.8;
+}
+
+.section-card li {
+    margin-bottom: 8px;
+    list-style-position: inside;
+}
+
+.section-card li::before {
+    content: "▸ ";
+    color: #e4b75c;
+    font-weight: bold;
+}
+
+.about-footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(228, 183, 92, 0.3);
+    color: #f0f0f0;
+}
+
+.about-footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.team-section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #e4b75c;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.team-card {
+    background: linear-gradient(135deg, #2c3e50, #34495e), url('./assets/images/texture.png');
+    background-blend-mode: overlay;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    background: rgba(228, 183, 92, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 2px solid #e4b75c;
+    overflow: hidden;
+    padding: 0;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-card h3 {
+    color: #e4b75c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    color: #f0f0f0;
+    font-size: 14px;
+    margin: 0;
+}
+

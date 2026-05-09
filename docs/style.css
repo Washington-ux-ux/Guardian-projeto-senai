@@ -126,9 +126,297 @@ a, a:visited, a:hover, a:active {
 
 /* CSS para conteudo principal do missing.html */
 
+.missing-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.missing-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.missing-header h2 {
+    color: #e4b75c;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.missing-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e4b75c;
+    font-size: 16px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 2px solid rgba(228, 183, 92, 0.3);
+    border-radius: 25px;
+    background: rgba(44, 62, 80, 0.8);
+    color: #f0f0f0;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #e4b75c;
+    background: rgba(44, 62, 80, 0.9);
+}
+
+.search-box input::placeholder {
+    color: rgba(240, 240, 240, 0.6);
+}
+
+.add-btn {
+    background: linear-gradient(135deg, #e4b75c, #d4a54a);
+    color: #0a0a0a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(228, 183, 92, 0.3);
+}
+
+.missing-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.missing-card {
+    background: linear-gradient(135deg, #2c3e50, #34495e), url('./assets/images/texture.png');
+    background-blend-mode: overlay;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.missing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(228, 183, 92, 0.2);
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-badge.missing {
+    background: rgba(231, 76, 60, 0.8);
+    color: white;
+}
+
+.case-id {
+    color: #e4b75c;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.person-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.avatar-placeholder {
+    width: 60px;
+    height: 60px;
+    background: rgba(228, 183, 92, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e4b75c;
+    flex-shrink: 0;
+}
+
+.avatar-placeholder i {
+    font-size: 24px;
+    color: #e4b75c;
+}
+
+.details h3 {
+    color: #e4b75c;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.details p {
+    color: #f0f0f0;
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.details i {
+    color: #e4b75c;
+    font-size: 12px;
+    width: 16px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.action-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.action-btn.edit {
+    background: rgba(52, 152, 219, 0.8);
+    color: white;
+}
+
+.action-btn.edit:hover {
+    background: rgba(52, 152, 219, 1);
+    transform: scale(1.1);
+}
+
+.action-btn.found {
+    background: rgba(46, 204, 113, 0.8);
+    color: white;
+}
+
+.action-btn.found:hover {
+    background: rgba(46, 204, 113, 1);
+    transform: scale(1.1);
+}
+
 
 /* CSS para conteudo principal do located.html */
 
+.encounter {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.encounter-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.encounter-header h2 {
+    color: #e4b75c;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.encounter-list {
+    background: linear-gradient(135deg, #2c3e50, #34495e), url('./assets/images/texture.png');
+    background-blend-mode: overlay;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.located-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.located-table th {
+    background: rgba(228, 183, 92, 0.2);
+    color: #e4b75c;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 2px solid #e4b75c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.located-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.located-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.located-table th, .located-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.located-table th {
+    background-color: #e4b75c;
+    color: white;
+    font-weight: bold;
+}
 
 /* CSS para conteudo principal do about.html */
 

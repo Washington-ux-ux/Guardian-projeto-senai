@@ -1,19 +1,30 @@
 import express, { Request, Response, json } from "express";
 import router from "./routes.js";
 import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 function createApp() {
     const app = express();
-    app.use(json());
-    app.use(express.static('.'));
-    app.use(router); // rotas sem /api
+    app.use(json({ limit: '10mb' })); 
+    
+ 
+    app.get('/missing', (req, res) => {
+        res.sendFile(path.join(process.cwd(), './docs/missing.html'));
+    });
+    
+    app.get('/located', (req, res) => {
+        res.sendFile(path.join(process.cwd(), './docs/located.html'));
+    });
+    
+    app.get('/about', (req, res) => {
+        res.sendFile(path.join(process.cwd(), './docs/about.html'));
+    });
+    
+    app.use(express.static(path.join(process.cwd(), './docs')));
+    app.use('/src', express.static(path.join(process.cwd(), './src')));
+    app.use(router); 
 
     app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, '../docs/index.html'));
+        res.sendFile(path.join(process.cwd(), './docs/index.html'));
     });
 
     return app;

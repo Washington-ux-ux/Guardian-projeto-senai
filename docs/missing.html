@@ -50,11 +50,106 @@
             </div>
 
             <div class="missing-list" id="missingList">
-                <!-- Cards serão populados dinamicamente via JavaScript -->
+                <!-- JavaScript Colocará registros aqui -->
+            </div>
+        </div>
+
+        <!-- Modal para Adicionar Desaparecido -->
+        <div class="modal-overlay" id="addModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Adicionar Desaparecido</h3>
+                    <button class="close-btn">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label>Foto</label>
+                            <div class="photo-upload">
+                                <input type="file" id="photoInput" accept="image/*">
+                                <div class="photo-preview" id="photoPreview">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Nome Completo *</label>
+                            <input type="text" id="nameInput" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Idade *</label>
+                            <input type="number" id="ageInput" min="0" max="150" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gênero *</label>
+                            <select id="genderInput" required>
+                                <option value="">Selecione...</option>
+                                <option value="male">Masculino</option>
+                                <option value="female">Feminino</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+
+                      
+                        <div class="form-group">
+                            <label>Cidade *</label>
+                            <input type="text" id="cityInput" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Estado</label>
+                            <input type="text" id="stateInput">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Último Local Avistado *</label>
+                            <input type="text" id="lastSeenInput" required>
+                        </div>
+
+                     
+                        <div class="form-group">
+                            <label>Data do Desaparecimento *</label>
+                            <input type="date" id="dateInput" required>
+                        </div>
+
+                       
+                        <div class="form-group">
+                            <label>Telefone para Contato</label>
+                            <input type="tel" id="phoneInput" placeholder="(00) 00000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nome do Contato</label>
+                            <input type="text" id="contactNameInput">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Descrição e Observações</label>
+                            <textarea id="descriptionInput" rows="4" placeholder="Detalhes adicionais sobre a aparência, roupas, marcas, último estado visto, etc."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn-cancel">Cancelar</button>
+                    <button class="btn-save">Salvar</button>
+                </div>
             </div>
         </div>
 
     </div>
     
+    <script src="./script/data.js"></script>
+    <script src="./script/cards.js"></script>
+    <script src="./script/modal.js"></script>
+    <script src="./script/form.js"></script>
+    <script src="./script/missing.js"></script>
 </body>
 </html>

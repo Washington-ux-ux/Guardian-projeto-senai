@@ -37,39 +37,13 @@
 
 
         <div class="encounter">
-            
             <div class="encounter-header">
                 <h2>Lista de pessoas que nosso programa ajudou a encontrar</h2>
             </div>
 
-            <div class="encounter-list">
-                <div class="encounter-item">
-                    <table class="located-table">
-                        <tr>
-                            <th>Nome</th>
-                            <th>Idade</th>
-                            <th>Local</th>
-                            <th>Data</th>
-                        </tr>
-
-                        <tr>
-                            <td>Nezuko Kamado</td>
-                            <td>14</td>
-                            <td>Asakusa</td>
-                            <td>02-05-2026</td>
-                        </tr>
-
-                        <tr>
-                            <td>Naruto Uzumaki</td>
-                            <td>12</td>
-                            <td>Konogakure</td>
-                            <td>03-05-2026</td>
-                        </tr>
-
-                    </table>
-                </div>
+            <div class="encounter-list" id="locatedList">
+                <!-- Será adicionado via JavaScript -->
             </div>
-
         </div>
 
 
@@ -80,5 +54,65 @@
 
     </div>
     
+    <script>
+        let locatedData = [];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadLocatedData();
+        });
+
+        function loadLocatedData() {
+            fetch('./src/data/located.json')
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    locatedData = data;
+                    renderLocatedCards();
+                })
+                .catch(function(err) {
+                    console.error('Erro ao carregar located.json:', err);
+                });
+        }
+
+        function renderLocatedCards() {
+            var list = document.getElementById('locatedList');
+            if (!list) return;
+            
+            list.innerHTML = '';
+            
+            if (locatedData.length === 0) {
+                list.innerHTML = '<p style="text-align: center; color: #f0f0f0;">Nenhuma pessoa localizada ainda.</p>';
+                return;
+            }
+            
+            var table = document.createElement('table');
+            table.className = 'located-table';
+            
+            // Cabeçalho
+            var thead = document.createElement('thead');
+            thead.innerHTML = 
+                '<tr>' +
+                    '<th>Nome</th>' +
+                    '<th>Idade</th>' +
+                    '<th>Local</th>' +
+                    '<th>Data</th>' +
+                '</tr>';
+            table.appendChild(thead);
+            
+            // Corpo
+            var tbody = document.createElement('tbody');
+            locatedData.forEach(function(person) {
+                var tr = document.createElement('tr');
+                tr.innerHTML = 
+                    '<td>' + person.name + '</td>' +
+                    '<td>' + person.age + '</td>' +
+                    '<td>' + person.location.city + '</td>' +
+                    '<td>' + new Date(person.foundAt || person.date).toLocaleDateString('pt-BR') + '</td>';
+                tbody.appendChild(tr);
+            });
+            table.appendChild(tbody);
+            
+            list.appendChild(table);
+        }
+    </script>
 </body>
 </html>
